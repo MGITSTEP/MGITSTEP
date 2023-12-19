@@ -1,15 +1,12 @@
 import java.util.Scanner;
 
-// Interfaz para los pasos del proceso
 interface Cocina {
     void prepararIngredientes();
     void cocinar();
     void servir();
 }
 
-// Clase abstracta para los robots de cocina
 abstract class RobotCocina implements Cocina {
-    // Implementación común para todos los robots
     public void prepararIngredientes() {
         System.out.println("Robot preparando ingredientes...");
     }
@@ -22,11 +19,10 @@ abstract class RobotCocina implements Cocina {
         System.out.println("Robot sirviendo el plato.");
     }
 
-    // Método abstracto para la acción específica de cada tipo de robot
+
     public abstract void realizarAccion();
 }
 
-// Clases concretas para los diferentes tipos de robots
 class RobotDesayuno extends RobotCocina {
     public void realizarAccion() {
         System.out.println("Robot de desayuno preparando café.");
